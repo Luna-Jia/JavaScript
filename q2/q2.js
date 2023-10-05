@@ -5,9 +5,8 @@
  and spaces. The factors include 1 and the number. The number is a positive integer.
  */
 
-function factors(n)
-{
-    var stringOfFactors = "1"   // 1 is the first factor.
+function factors(n){
+    var stringOfFactors = "1"  // 1 is the first factor.
     for (var i = 2; i <= n / 2; i++) // check each number 2 to (n / 2)
     {
         if (n % i == 0) // if it's a factor of n, add it to string
@@ -19,3 +18,5 @@ function factors(n)
      
     return stringOfFactors
 }
+
+console.log(factors(10));

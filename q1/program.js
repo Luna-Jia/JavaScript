@@ -70,6 +70,17 @@ function tax(income,status){
 
 // console.log(tax(355000,"single"))
 
+/* 5
+Write a function named compoundInterest that computes the compound interest. If p amount is invested for 
+n years with interest rate r and the money is compounded annually then the final amount will be 
+p(1 + r/100)n . The function takes initial amount p, interest rate r which is between 0 and 100, and the 
+number of years n as parameters and returns the final amount. The parameter values are all positive.
+*/
 
+function compoundInterest(p, r, n){
+    var amount = (1 + r/100);
+    amount =p *  Math.pow(amount, n);
+    return amount;
+}
 
-
+// console.log(compoundInterest(5000, 7,20));
