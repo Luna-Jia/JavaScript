@@ -84,3 +84,31 @@ function compoundInterest(p, r, n){
 }
 
 // console.log(compoundInterest(5000, 7,20));
+
+/* 7.
+Write a function named createIdPassword that takes a last name and a first name as parameters and returns 
+an object containing an id and a password. The id is the first letter of the first name followed by the 
+last name. The password is the first letter of the first name followed by the last letter of the first 
+name followed by the first three letters of the last name followed by the length of the first name 
+followed by the length of the last name. Both id and password are all upper case. For example if the 
+first name is John and the last name is Maxwell then the id is JMAXWELL and the password is JNMAX47. The 
+returned object has two properties namely id and password, and their values are set to the id and 
+password that are created.
+ */
+
+function createIdPassword(lname, fname) {
+    var firstLOfFName = fname.slice(0,1);
+    var id = firstLOfFName + lname;
+    var lenFname = fname.length;
+    var lastLOfFName = fname.slice(lenFname-1, lenFname);
+    var fist3LOfLname = lname.slice(0,3);
+    var lenLname = lname.length;
+    var passWord = firstLOfFName + lastLOfFName + fist3LOfLname + lenFname + lenLname;
+    id = id.toUpperCase();
+    passWord = passWord.toUpperCase();
+
+    return {id, passWord};
+
+}
+
+// console.log(createIdPassword("Jia", "Luna"));
