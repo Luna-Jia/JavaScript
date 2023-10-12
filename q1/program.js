@@ -162,6 +162,26 @@ console.log(zips); // ['11111', '67890', '12345']
 */
 
 
+/* 11. 
+Write a function named ApplyFunctionToArray that takes a function f and an array p as parameters. The f is 
+a function that takes a number as a parameter and returns a number as output. The p is an array of numbers.
+The function calls f on each element of p and replaces the element with the output of f. For example if f 
+is a square function then all the values in p will be squared. The function changes the calling/parameter 
+array.
+ */
 
+function ApplyFunctionToArray(f, p) {
+    for (var i = 0; i < p.length; i++) {
+        p[i] = f(p[i])
+    }
+
+    return p;
+}
+
+function f(n){
+    return n * n;
+}
+
+// console.log(ApplyFunctionToArray(f,[4,8,36,7]));
 
 
