@@ -112,3 +112,56 @@ function createIdPassword(lname, fname) {
 }
 
 // console.log(createIdPassword("Jia", "Luna"));
+
+/* 9.
+Write a function named mySort that takes three arrays and sort/rearrange them in parallel. The three 
+arrays contain information about students. The first array contains last names. The second array contains 
+gpa's. The third array contains zip codes. The sorting is performed in the ascending order of last names. 
+The function changes the calling/parameter arrays. Built in sorting methods cannot be used. Write custom 
+code using selection sort algorithm.
+*/
+
+function mySort(lnames, gpas, zips){
+
+    for(var i = 0; i < lnames.length-1; i++) {
+        var min_index = i;
+        for(var j=i+1; j < lnames.length; j++){
+            if (lnames[j]< lnames[min_index]){
+                min_index = j;
+            }
+        }
+
+        var tempLname = lnames[i];
+                lnames[i] = lnames[min_index];
+                lnames[min_index] = tempLname;
+
+                var tempgpa = gpas[i];
+                gpas[i] = gpas[min_index];
+                gpas[min_index] = tempgpa;
+
+                var tempzip = zips[i];
+                zips[i] = zips[min_index];
+                zips[min_index] = tempzip;  
+
+    }
+
+    return lnames, gpas, zips;
+
+}
+
+/* 
+const lnames = ['Smith', 'Johnson', 'Doe'];
+const gpas = [3.5, 4.0, 3.0];
+const zips = ['12345', '67890', '11111'];
+
+mySort(lnames, gpas, zips);
+
+console.log(lnames); // ['Doe', 'Johnson', 'Smith']
+console.log(gpas);     // [3.0, 4.0, 3.5]
+console.log(zips); // ['11111', '67890', '12345']
+*/
+
+
+
+
+
