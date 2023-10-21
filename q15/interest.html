@@ -18,22 +18,22 @@
 
     <table>
         <tr> 
-            <td><label> Initial Amount: </label>
-            <input type="text" id="p"></input></td>
+            <td><label> Initial Amount: </label> <!--label-->>
+            <input type="text" id="p"></input></td> <!--textbox for Initial Amount-->
         </tr>
 
         <tr>
             <td>
                 <label> Interest Rate: </label>
-                <input type="text" id="n"></input>
+                <input type="text" id="r"></input> <!--textbox for interest rate-->
 
             </td>
         </tr>
 
         <tr>
             <td>
-                <label> Number of Years: </label>
-                <input type="text" id="r">
+                <label> Number of Years: </label> 
+                <input type="text" id="n"> <!--textbox for year-->
 
             </td>
  
@@ -41,14 +41,14 @@
 
         <tr>
             <td>
-                <button id="calculate"> Calculate Final Amount</button>
+                <button id="calculate"> Calculate Final Amount</button> <!--button-->
 
             </td>
         </tr>
 
         <tr>
             <td>
-                <p id="final"></p>
+                <p id="final"></p> <!--final result-->
             </td>
         </tr>
 
@@ -60,29 +60,26 @@
 
     </div>
 
-
-
-
     <p id="final"></p>
 
     <script>
         function getInterest() {
-            var p = document.getElementById("p").value;
-            p = Number(p);
+            var p = document.getElementById("p").value; // get input for Initial Amount, save it a variable p
+            p = Number(p); // cast p from string to number 
 
-            var n = document.getElementById("n").value;
-            n = Number(n);
+            var r = document.getElementById("r").value; // get input for interest rate, save it a variable r
+            r = Number(r); // cast r from string to number 
 
-            var r = document.getElementById("r").value;
-            r = Number(r);
+            var n = document.getElementById("n").value; // get input for number of years, save it a variable n
+            n = Number(n); // cast n from string to number 
 
-            var final = ((1 + r/100) ** n) * p;
+            var final = ((1 + r/100) ** n) * p; // calculate final amount, save it to a variable final 
 
-            document.getElementById("final").innerHTML = "The final amount is "+ final;
+            document.getElementById("final").innerHTML = "The final amount is "+ final; // link final to html 
             
         }
 
-        document.getElementById("calculate").onclick = getInterest;
+        document.getElementById("calculate").onclick = getInterest; // when click button, call function getInterest()
     </script>
 
     
