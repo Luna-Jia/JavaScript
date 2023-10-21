@@ -1,0 +1,23 @@
+table{
+    font-size: larger;
+    margin: auto;
+   
+    height: auto;
+    width: auto;  
+}
+
+body{
+    margin: 30px;
+}
+
+td{
+    text-align: center;
+    padding: 5px;
+}
+
+
+
+
+
+
+
