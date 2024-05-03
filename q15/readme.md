@@ -1,4 +1,4 @@
- # Interest Calculator
+ # :money_with_wings: Interest Calculator
  
  This is a web page that calculates the compound interest. 
  ### [:clapper: Checkout the demo video here ^_^](https://youtu.be/xBqvuvyl8as?si=og5EK3aM7YnA0ARj)
